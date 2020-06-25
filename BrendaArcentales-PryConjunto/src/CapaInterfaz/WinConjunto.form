@@ -44,7 +44,7 @@
                               <Component id="btnDiferencia1" pref="0" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
-                              <EmptySpace min="0" pref="4" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="btnCardinalidad" pref="114" max="32767" attributes="0"/>
                                   <Component id="btnUnion" max="32767" attributes="0"/>
@@ -60,6 +60,7 @@
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="btnSalir" alignment="1" max="32767" attributes="0"/>
                           <Component id="btnLimpiar" alignment="1" max="32767" attributes="0"/>
+                          <Component id="btnInformacion" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -95,6 +96,7 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="btnDiferencia" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                   <Component id="btnDiferencia1" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                  <Component id="btnInformacion" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="btnIgual" min="-2" pref="34" max="-2" attributes="0"/>
@@ -189,6 +191,14 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnIgualActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnInformacion">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Informacion"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnInformacionActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
