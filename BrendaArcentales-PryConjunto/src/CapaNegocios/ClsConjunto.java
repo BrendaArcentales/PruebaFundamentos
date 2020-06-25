@@ -110,31 +110,7 @@ public class ClsConjunto {
         return diferencia;
     }
     
-    public ClsConjunto difesime(ClsConjunto m){
-        ClsConjunto dife = new ClsConjunto(_card + m._card);
-        int k = 0;
-        for(int i = 0;  i < m._card;i++){
-            if (!this.existe(m._elem[i])){
-                dife._elem[k] = m._elem[i];
-                k = k + 1;
-            }
-        }
-        for(int i = 0;  i < _card;i++){
-            boolean existe1 = false;
-            for(int j = 0; j < m._card; j++) {
-                if (m._elem[j].equals(_elem[i])){
-                    existe1 = true;
-                    break;
-                }
-            }
-            if (!existe1){
-                dife._elem[k] = _elem[i];
-                k = k + 1;
-            }
-        }
-        dife._card = k;
-        return dife;
-    }
+    
     public ClsConjunto productcart(ClsConjunto m)
     {
         ClsConjunto produc = new ClsConjunto(_card + m._card);

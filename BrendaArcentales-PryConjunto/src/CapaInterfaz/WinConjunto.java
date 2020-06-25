@@ -38,7 +38,6 @@ public class WinConjunto extends javax.swing.JFrame {
         btnUnion = new javax.swing.JButton();
         btnInterseccion = new javax.swing.JButton();
         btnDiferencia = new javax.swing.JButton();
-        btnDiferenciaSimetrica = new javax.swing.JButton();
         btnDiferencia1 = new javax.swing.JButton();
         btnIgual = new javax.swing.JButton();
 
@@ -105,13 +104,6 @@ public class WinConjunto extends javax.swing.JFrame {
             }
         });
 
-        btnDiferenciaSimetrica.setText("DifeSimetrica");
-        btnDiferenciaSimetrica.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDiferenciaSimetricaActionPerformed(evt);
-            }
-        });
-
         btnDiferencia1.setText("Produc.Cartesiano");
         btnDiferencia1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -135,31 +127,25 @@ public class WinConjunto extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtPantalla)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnIgual, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnCardinalidad)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
-                                .addComponent(btnElementos))
+                                .addComponent(btnDiferencia, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(btnDiferencia1, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnUnion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(11, 11, 11)
-                                .addComponent(btnInterseccion)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 92, Short.MAX_VALUE)
+                                .addGap(0, 4, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(btnCardinalidad, javax.swing.GroupLayout.DEFAULT_SIZE, 114, Short.MAX_VALUE)
+                                    .addComponent(btnUnion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btnInterseccion, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(btnElementos, javax.swing.GroupLayout.Alignment.TRAILING))))
+                        .addGap(92, 92, 92)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(btnSalir, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnLimpiar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnDiferencia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnDiferencia1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(11, 11, 11)
-                                .addComponent(btnDiferenciaSimetrica))
-                            .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(btnIgual, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                            .addComponent(btnLimpiar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -184,12 +170,10 @@ public class WinConjunto extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnDiferencia, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnDiferenciaSimetrica, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnDiferencia1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnIgual, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(56, Short.MAX_VALUE))
+                    .addComponent(btnDiferencia1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnIgual, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(63, Short.MAX_VALUE))
         );
 
         txtPantalla.getAccessibleContext().setAccessibleName("txtPantalla");
@@ -244,9 +228,6 @@ public class WinConjunto extends javax.swing.JFrame {
                 q=p.diferencia(q);
                 break;
             case 4:
-                q=p.difesime(q);
-                break;
-            case 5:
                 q=p.productcart(q);
                 break;                
         }
@@ -273,21 +254,14 @@ public class WinConjunto extends javax.swing.JFrame {
         p= new ClsConjunto(q);
         txtPantalla.setText("");
         txtPantalla.requestFocus();
-        codigo=3;
-    }//GEN-LAST:event_btnDiferenciaActionPerformed
-
-    private void btnDiferenciaSimetricaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDiferenciaSimetricaActionPerformed
-        p= new ClsConjunto(q);
-        txtPantalla.setText("");
-        txtPantalla.requestFocus();
         codigo=4;
-    }//GEN-LAST:event_btnDiferenciaSimetricaActionPerformed
+    }//GEN-LAST:event_btnDiferenciaActionPerformed
 
     private void btnDiferencia1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDiferencia1ActionPerformed
         p= new ClsConjunto(q);
         txtPantalla.setText("");
         txtPantalla.requestFocus();
-        codigo=5;
+        codigo=3;
     }//GEN-LAST:event_btnDiferencia1ActionPerformed
 
     
@@ -297,7 +271,6 @@ public class WinConjunto extends javax.swing.JFrame {
     private javax.swing.JButton btnCardinalidad3;
     private javax.swing.JButton btnDiferencia;
     private javax.swing.JButton btnDiferencia1;
-    private javax.swing.JButton btnDiferenciaSimetrica;
     private javax.swing.JButton btnElementos;
     private javax.swing.JButton btnIgual;
     private javax.swing.JButton btnInterseccion;
